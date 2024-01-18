@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Revou Website</title>
+</head>
+
+<body>
+
+    <div class="hero-section">
+        <h1>
+            Mengukur Luas dan Keliling Bangunan Tanpa Kesulitan.
+        </h1>
+        <p>Dapatkan kemudahan dalam mengukur luas dan keliling bangunan tanpa repot. Pelajari cara praktis dan efisien!
+        </p>
+        <a href="#kalkulator" class="cta-button">Mulai Belajar Sekarang!!</a>
+        <img src="illustrasi-anda.png" alt="Illustration" class="illustration">
+    </div>
+
+    <div class="section-calculator" id="kalkulator">
+        <div class="left-column">
+            <div class="menu-card">
+                <!-- Kartu untuk menghitung luas -->
+                <div class="gambar">
+                    <img src="gambar.jpg" alt="Gambar" />
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-title">Hitung Luas Persegi</div>
+                    <div class="menu-card-description">Deskripsi singkat mengenai card ini.</div>
+                    <a href="javascript:void(0)" class="menu-card-button" onclick="toggleContent('luas')">Ayoo
+                        Hitung</a>
+                </div>
+            </div>
+            <div class="menu-card">
+                <!-- Kartu untuk menghitung keliling -->
+                <div class="gambar">
+                    <img src="gambar.jpg" alt="Gambar" />
+                </div>
+                <div class="menu-card-content">
+                    <div class="menu-card-title">Hitung Keliling Persegi</div>
+                    <div class="menu-card-description">Deskripsi singkat mengenai card ini.</div>
+                    <a href="javascript:void(0)" class="menu-card-button" onclick="toggleContent('keliling')">Ayoo
+                        Hitung</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-column" id="keliling" style="display: none;">
+
+            <div class="content-title"> Hitung Keliling Persegi</div>
+            <div class="content-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+            <div class="combine-container">
+                <div class="image-container">
+                    <div class="image">
+                        <img src="gambar.jpg" alt="Gambar" />
+                    </div>
+                </div>
+
+                <div class="explanation-container">
+                    <div class="explanation">
+                        <h2>Rumus Mencari Keliling Persegi Yaitu</h2>
+                        <div class="combine-explanation">
+                            <div class="explanation-kanan">
+                                <h4>Dimana</h4>
+                                <h4>K = Keliling</h4>
+                                <h4>S = Sisi</h4>
+                            </div>
+                            <div class="explanation-kiri">
+                                <h4>K = 4 X S</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input type="text" class="input-text" placeholder="Masukkan panjang sisi">
+                <button class="submit-button" onclick="hitungKeliling()">Kirim</button>
+            </div>
+
+            <div class="result-container">
+                <!-- Container hasil -->
+            </div>
+
+
+        </div>
+        <div class="right-column" id="luas">
+
+            <div class="content-title">Hitung Luas Persegi</div>
+            <div class="content-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+            <div class="combine-container">
+                <div class="image-container">
+                    <div class="image">
+                        <img src="gambar.jpg" alt="Gambar" />
+                    </div>
+                </div>
+
+                <div class="explanation-container">
+                    <div class="explanation">
+                        <h2>Rumus Mencari Luas Persegi Yaitu</h2>
+                        <div class="combine-explanation">
+                            <div class="explanation-kanan">
+                                <h4>Dimana</h4>
+                                <h4>L = Luas</h4>
+                                <h4>S = Sisi</h4>
+                            </div>
+                            <div class="explanation-kiri">
+                                <h4>L = S X S</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input type="text" class="input-text" id="inputSisi" placeholder="Masukkan sisi">
+                <button class="submit-button" onclick="hitungLuas()">Kirim</button>
+            </div>
+
+            <div class="result-container" id="resultContainer">
+                <!-- Container hasil -->
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+<script src="js/script.js"></script>
+
+</html>

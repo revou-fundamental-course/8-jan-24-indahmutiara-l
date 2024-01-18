@@ -1,0 +1,263 @@
+   html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: black;
+            background-size: cover;
+        }
+
+
+        .hero-section {
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 4em;
+            margin: 0 470px;
+            line-height: 1.2em;
+        }
+
+        .hero-section p {
+            font-size: 1.5em;
+            margin: 30px 470px;
+        }
+
+        .hero-section .cta-button {
+            display: inline-block;
+            padding: 20px;
+            font-size: 1.5em;
+            text-decoration: none;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            animation: lightAnimation 2s linear infinite alternate;
+        }
+
+        .hero-section .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-section .cta-button:hover {
+            background-color: #333;
+            color: white;
+            transform: translateY(-5px);
+            animation: none;
+            /* Menghentikan animasi saat tombol dihover */
+        }
+
+        @keyframes lightAnimation {
+            0% {
+                box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+            }
+
+            100% {
+                box-shadow: 0 0 20px 15px rgba(255, 255, 255, 0);
+            }
+        }
+
+        .hero-section .cta-button:hover:before {
+            transform: translate(-50%, -50%) scale(3);
+        }
+
+        .hero-section .illustration {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 80%;
+            height: auto;
+        }
+
+
+        .section-calculator {
+            padding: 50px;
+            display: flex;
+            height: 100vh;
+            gap: 10px;
+        }
+
+        .left-column {
+            width: 30%;
+            background-color: transparent;
+            padding: 5px;
+            border-radius: 20px;
+            border: 3px solid white;
+        }
+
+        .menu-card {
+            display: flex;
+            /* Membuat gambar dan konten card berada dalam satu baris */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            height: 120px;
+        }
+
+        .gambar {
+            width: 40%;
+            /* Lebar gambar 40% dari lebar parent (.menu-card) */
+            margin: 10px;
+            /* Memberikan jarak antara gambar dan konten card */
+        }
+
+        .gambar img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .menu-card-content {
+            flex: 1;
+
+        }
+
+        .menu-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .menu-card-description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .menu-card-button {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: black;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .menu-card-button:hover {
+            background-color: grey;
+        }
+
+
+        .right-column {
+            flex: 1;
+            padding: 50px;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        .content-title {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            /* Huruf besar */
+
+        }
+
+        .content-description {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .combine-container {
+            display: flex;
+            width: 100%;
+            margin: 5px;
+            height: 30%;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .image-container {
+            background-color: white;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .explanation-container {
+            background-color: white;
+            width: 70%;
+            padding: 10px;
+        }
+        .combine-explanation{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .explanation-kiri{
+           border: 1px solid black;
+           padding: 10px;
+           height: fit-content;
+        }
+        .image-container img,
+        .explanation-container p {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .input-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .input-text {
+            flex: 1;
+            padding: 16px;
+            margin-right: 10px;
+            width: 75%;
+            border-radius: 10px;
+
+        }
+
+        .submit-button {
+            padding: 16px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            width: 15%;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .submit-button:hover {
+            background-color: #444444;
+        }
+
+        .result-container {
+            background-color: white;
+            height: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            border-radius: 20px;
+            font-size: 35px;
+            font-weight: 600;
+            padding: 30px;
+        }
